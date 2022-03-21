@@ -1,0 +1,263 @@
+.contact {
+
+    padding: $space-xhuge;
+    background-color: $color-white;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: $space-huge;
+   
+
+    &__entry {
+        width: 100%;
+        padding: $space-xhuge 0 0 0;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        color: $color-black;
+
+      }
+    
+      &__header {
+        font-size: $font-huge;
+        
+      }
+    
+      &__hr {
+        width: 40%;
+        height: 0.4rem;
+        background-color: $color-black;
+        margin: $space-small $space-huge $space-huge $space-huge;
+      }
+  }
+  
+  .content-container {
+    
+    width: 47%;
+    height: 60rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    margin: $space-huge 0;
+    padding: $space-xlarg;
+    border: 5px solid $color-primary-dark;
+  
+    &__header{
+        display: block;
+        padding: $space-larg;
+        font-size: $font-xlarg;
+        
+    }
+
+    &__contact{
+        width: 80%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-size: $font-larg;
+    }
+
+    &__hours{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-size: $font-larg;
+
+        & p {
+
+            display: block;
+
+            &:nth-child(2){
+                padding-bottom: 0.8rem ;
+            }
+            
+        }
+        
+    }
+
+    &__link{
+        padding: 0.3rem 0;
+
+        & a{
+            text-decoration: none;
+            color: $color-black;
+        }
+
+    }
+
+    &__icon {
+      height: 2.2rem;
+      width: 2.2rem;
+      fill: $color-primary-dark;
+      transform: translateY(0.4rem);
+    }
+  
+ 
+  }
+  
+  .map-container {
+    width: 47%;
+    height: 60rem;
+    margin: $space-huge 0;
+    padding: $space-xlarg;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    z-index: 2;
+    
+    border: 5px solid $color-brown;
+  
+    &__header {
+      font-size: $font-huge;
+    }
+  
+    &__content {
+     width: 100%;
+     height: 85% ;
+     border: 1px solid;
+    }
+
+  }
+  
+  .leaflet-popup {
+    
+    &-tip {
+      background: $color-white;
+      box-shadow: 0 3px 14px rgba(0, 0, 0, 0.4);
+    }
+  
+    &-content {
+      font-size: $font-medium;
+    }
+  
+    &-content-wrapper {
+      background: $color-white;
+
+      box-shadow: 0 3px 14px rgba(0, 0, 0, 0.4);
+      border-radius: 0%;
+      padding: 1rem;
+      border-left: 0.8rem solid $color-black;
+    }
+}
+
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////
+// ----------------------- BREAKPOINT -  $bp-xlarge: 75em; (1200px) ------------------------///
+////////////////////////////////////////////////////////////////////////////////////////////////
+
+@media (max-width: $bp-xlarge) {
+  .contact {
+    &__header{
+            
+      font-size: $font-huge;
+   }
+
+    flex-direction: column;
+  }
+  .content-container {
+    
+    width: 70%;
+    padding: $space-medium;
+    
+  }
+  
+  .map-container {
+    width: 70%;
+  }
+  
+}
+
+////////////////////////////////////////////////////////////////////////////////////////////////
+// ----------------------- BREAKPOINT -  $bp-large: 62.5em; (1000px) ------------------------///
+////////////////////////////////////////////////////////////////////////////////////////////////
+
+@media (max-width: $bp-large) {
+  .content-container {
+    
+    width: 80%;
+    
+  }
+  
+  .map-container {
+    width: 80%;
+  }
+
+}
+
+////////////////////////////////////////////////////////////////////////////////////////////////
+// ----------------------- BREAKPOINT -  $bp-medium: 50em; (800px) ------------------------///
+////////////////////////////////////////////////////////////////////////////////////////////////
+
+@media (max-width: $bp-medium) {
+  .content-container {
+    width: 90%;
+    &__header{
+      font-size: $font-larg;
+      padding: $space-medium 0;
+    }
+
+    &__contact{
+      font-size: $font-medium;
+    }
+
+    &__hours{
+      font-size: $font-medium;
+    }
+  }
+
+  .map-container {
+    width: 90%;
+
+    &__header {
+      font-size: $font-xlarg;
+    }
+  }
+
+}
+
+////////////////////////////////////////////////////////////////////////////////////////////////
+// ----------------------- BREAKPOINT -  $bp-small: 37.5em; (600px) ------------------------///
+////////////////////////////////////////////////////////////////////////////////////////////////
+
+@media (max-width: $bp-small) {
+
+  .contact {
+
+    padding: $space-huge;
+
+    
+  
+    &__hr {
+      width: 70%;
+     
+    }
+   
+
+  }
+  .content-container {
+    width: 100%;
+    padding:  0 $space-small;
+  }
+
+  .map-container {
+    width: 100%;
+    padding: $space-small  $space-small 0 $space-small;
+  
+    
+  }
+
+}
+
+////////////////////////////////////////////////////////////////////////////////////////////////
+// ----------------------- BREAKPOINT -  $bp-xsmall: 25em; (400px) ------------------------///
+////////////////////////////////////////////////////////////////////////////////////////////////
+
+@media (max-width: $bp-xsmall) {
+
+}

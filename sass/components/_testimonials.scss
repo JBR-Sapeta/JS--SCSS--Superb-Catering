@@ -1,0 +1,343 @@
+.testimonials {
+  padding: $space-xhuge;
+  position: relative;
+  background-color: $color-primary;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: $space-xhuge $space-huge;
+
+  &__entry {
+    width: 100%;
+    grid-column: 1/-1;
+    padding: $space-xhuge 0 0 0;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    color: $color-white;
+    z-index: 1;
+  }
+
+  &__header {
+    font-size: $font-xhuge;
+  }
+
+  &__hr {
+    width: 40%;
+    height: 0.4rem;
+    color: $color-white;
+    background-color: $color-white;
+    margin: $space-small $space-huge $space-huge $space-huge;
+  }
+}
+
+.bg-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0.8;
+  overflow: hidden;
+  
+
+  &__content {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+}
+
+.testimonial {
+  z-index: 1;
+
+  &__quote-bcg {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    padding: $space-huge;
+    width: 100%;
+    min-height: 40rem;
+    background-color: $color-white;
+    opacity: 0.9;
+    clip-path: polygon(
+      0% 0%,
+      100% 0%,
+      100% 75%,
+      75% 75%,
+      75% 100%,
+      50% 75%,
+      0% 75%
+    );
+  }
+
+  &__blockquote {
+    padding: $space-huge   $space-huge   $space-larg   $space-huge ;
+    display: block;
+    font-size: $font-larg;
+  }
+
+  &__name {
+    padding: 0 $space-huge;
+    align-self: flex-end;
+    font-size: $font-xlarg;
+  }
+
+  
+
+ 
+
+  &-more {
+
+    &__bcg {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      flex-direction: column;
+      padding:$space-huge;
+      width: 100%;
+      min-height: 40rem;
+      background-color: $color-white;
+      opacity: 0.9;
+      clip-path: polygon(0% 0%, 100% 0%, 100% 37.5%, 100% 75%, 0% 75%);
+    }
+
+    &__icon {
+      height: 3.4rem;
+      width: 3.4rem;
+      fill: $color-primary-dark;
+      transform: translateY(1rem);
+    }
+
+    &__header {
+      padding:  0 0 $space-medium 0 ;
+      font-size: $font-xlarg;
+    }
+
+    &__text {
+      font-size: $font-larg;
+    }
+
+    &__links {
+      width: 100%;
+      padding: $space-medium 0 0 0;
+      display: flex;
+      justify-content: space-around;
+      font-size: $font-larg;
+
+    }
+
+    &__link {
+      display: block;
+      font-size: $font-larg;
+      padding-left: 2rem;
+      
+      & a{
+        padding: $space-small;
+        color: $color-black;
+        text-decoration: none;
+      }
+    }
+
+   
+  }
+}
+
+////////////////////////////////////////////////////////////////////////////////////////////////
+// ----------------------- BREAKPOINT -  $bp-huge: 87.5em; (1400px) ------------------------///
+////////////////////////////////////////////////////////////////////////////////////////////////
+
+@media (max-width: $bp-huge) {
+
+ 
+
+  .testimonial {
+    
+    &__blockquote {
+      padding: 0 ;
+   
+    }
+  
+    &__name {
+      padding: $space-huge;
+   
+    }
+  
+  
+  }
+
+
+}
+
+
+
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////
+// ----------------------- BREAKPOINT -  $bp-xlarge: 75em; (1200px) ------------------------///
+////////////////////////////////////////////////////////////////////////////////////////////////
+
+@media (max-width: $bp-xlarge) {
+
+  .testimonials {
+    &__header {
+      font-size: $font-huge;
+    }
+  }
+
+  .testimonial {
+   
+  
+    &__quote-bcg {
+      padding: $space-larg;
+    }
+    &-more {
+
+      &__bcg {
+        padding:$space-larg;
+      }
+  
+      &__icon {
+        height: 2.4rem;
+        width: 2.4rem;
+        transform: translateY(.5rem);
+        
+      }
+      &__link {
+        padding: $space-small 0 0 0;
+        
+        
+      }
+    }  
+  }
+
+
+}
+
+////////////////////////////////////////////////////////////////////////////////////////////////
+// ----------------------- BREAKPOINT -  $bp-large: 62.5em; (1000px) ------------------------///
+////////////////////////////////////////////////////////////////////////////////////////////////
+
+@media (max-width: $bp-large) {
+
+  .testimonials {
+    padding: $space-xhuge;
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .testimonial {
+
+    &__blockquote {
+      padding: $space-medium 0 ;
+   
+    }
+  
+   
+  
+    &__quote-bcg {
+      padding: $space-huge;
+    }
+    &-more {
+
+      &__bcg {
+        padding: $space-huge;
+      }
+  
+     
+    }  
+  }
+
+}
+
+////////////////////////////////////////////////////////////////////////////////////////////////
+// ----------------------- BREAKPOINT -  $bp-medium: 50em; (800px) ------------------------///
+////////////////////////////////////////////////////////////////////////////////////////////////
+
+@media (max-width: $bp-medium) {
+
+  .testimonial {
+
+    &__blockquote {
+     
+      font-size: $font-medium;
+    }
+
+    &__name {
+     
+      padding: $space-larg ;
+      font-size: $font-larg;
+    }
+    &-more {
+
+      &__header {
+        font-size: $font-larg;
+      }
+  
+      &__text {
+        font-size: $font-medium;
+      }
+  
+      &__links {
+        font-size: $font-medium;
+  
+      }
+    }
+  }
+}
+
+////////////////////////////////////////////////////////////////////////////////////////////////
+// ----------------------- BREAKPOINT -  $bp-small: 37.5em; (600px) ------------------------///
+////////////////////////////////////////////////////////////////////////////////////////////////
+
+@media (max-width: $bp-small) {
+
+  .testimonials {
+    padding: $space-larg;
+    grid-gap: $space-huge $space-huge;
+
+    &__header {
+      font-size: $font-xhuge;
+    }
+  
+    &__hr {
+      width: 70%;
+    }
+  }
+  .testimonial {
+  
+  
+    &__name {
+      padding: $space-medium $space-small;
+    }
+  }
+}
+
+////////////////////////////////////////////////////////////////////////////////////////////////
+// ----------------------- BREAKPOINT -  $bp-xsmall: 25em; (400px) ------------------------///
+////////////////////////////////////////////////////////////////////////////////////////////////
+
+@media (max-width: $bp-xsmall) {
+  .testimonial {
+    &__quote-bcg {
+      padding:$space-larg $space-medium;
+    }
+    &-more {
+
+      &__bcg {
+        padding:$space-larg $space-medium;
+      }
+  
+      &__links {
+        
+        font-size: $font-medium;
+  
+      }
+  
+      &__link {
+        font-size: $font-medium;
+      }
+    }  
+  }
+
+}

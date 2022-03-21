@@ -1,0 +1,106 @@
+.footer {
+    padding: $space-huge;
+    background-color: $color-primary;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: $space-huge $space-medium ;
+  
+    &__icon {
+      height: 1.6rem;
+      width: 1.6rem;
+      fill: $color-primary-dark;
+      transform: translateY(0.3rem);
+      margin-right: 0.5rem;
+    }
+
+
+    &__container {
+        font-size: $font-larg;
+        justify-self: center;
+        align-self: start;
+    }
+
+    &__list {
+        list-style-type: none;
+        text-align: center;
+        font-weight: 600;
+
+        & li {
+            font-weight: 400;
+        }
+
+        & a{
+            text-decoration: none;
+            color: $color-black;
+
+            &:hover{
+                text-decoration: underline;
+                color: $color-primary-dark;
+                
+            }
+        }
+    }
+
+    &__link {
+        display: block;
+        text-decoration: none;
+       
+        &:hover {
+          text-decoration: underline;
+          
+        }
+    }
+
+
+    &__rights {
+        grid-column: 1/-1;
+        grid-row: 2;
+        justify-self: center;
+        align-self: center;
+
+        font-size: $font-medium;
+    }
+
+
+}
+  
+  
+////////////////////////////////////////////////////////////////////////////////////////////////
+// ----------------------- BREAKPOINT -  $bp-huge: 87.5em; (1400px) ------------------------///
+////////////////////////////////////////////////////////////////////////////////////////////////
+
+@media (max-width: $bp-huge) {
+
+}
+
+////////////////////////////////////////////////////////////////////////////////////////////////
+// ----------------------- BREAKPOINT -  $bp-xlarge: 75em; (1200px) ------------------------///
+////////////////////////////////////////////////////////////////////////////////////////////////
+
+@media (max-width: $bp-xlarge) {
+  
+}
+
+////////////////////////////////////////////////////////////////////////////////////////////////
+// ----------------------- BREAKPOINT -  $bp-large: 62.5em; (1000px) ------------------------///
+////////////////////////////////////////////////////////////////////////////////////////////////
+
+@media (max-width: $bp-large) {
+    .footer {
+       
+        grid-template-columns: repeat(1, 1fr);
+
+        &__rights {
+            font-size:$font-small ;
+            grid-row: 4;
+        }
+    
+        
+    }
+
+}
+
+  
+ 
+ 
+  

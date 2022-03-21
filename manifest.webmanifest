@@ -1,0 +1,10 @@
+{
+  "name": "Superb Catering",
+  "start-url": "/index.html",
+  "background_color": "#ffffff",
+  "theme_color": "#ffe3e3",
+  "icons": [
+    { "src": "img/logo-512.png", "typ": "image/png", "sizes": "512x512", "purpose": "any maskable" },
+    { "src": "img/logo-192.png", "typ": "image/png", "sizes": "192x192", "purpose": "any maskable"}
+  ]
+}

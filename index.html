@@ -1,0 +1,677 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Superb catering company webpage.">
+    <meta name="author" content="Jakub Sapeta.">
+    <meta name="keywords" content="Catering.">
+    <meta name="theme-color" content="#ffe3e3">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A==" crossorigin="" />
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA==" crossorigin=""></script>
+
+    
+    <title>Superb Catering</title>
+    <link rel="icon" href="img/logo-84.JPG" type="image/x-icon" />
+    <link rel="apple-touch-icon" href="img/apple-touch-icon.JPG" />
+    <link rel="manifest" href="manifest.webmanifest"  />
+    <link rel="stylesheet" href="css/style.css" />
+    
+  </head>
+
+  <body>
+
+<!---------------------------------- HEADER ----------------------------------------->
+
+   <header class="header">
+    <div class="header__container">
+      <div class="header__baner">
+        <picture class="header__logo">
+          
+          <img src="./img/logo-84.JPG" alt="logo firmy">
+        </picture>
+      <p class="header__name">Superb Catering</p>
+      </div>
+      <nav class="header__navigation">
+        <ul class="navigation">
+          <li class="navigation--animation">
+            <a class="navigation__link hover-animation" href="#home">Home</a>
+          </li>
+          <li class="navigation--animation">
+            <a class="navigation__link hover-animation" href="#o-nas">O nas</a>
+          </li>
+          <li class="navigation--animation">
+            <a class="navigation__link hover-animation" href="#oferta">Oferta</a>
+          </li>
+          <li class="navigation--animation">
+            <a class="navigation__link hover-animation" href="#opinie">Opinie</a>
+          </li>
+          <li class="navigation--animation">
+            <a class="navigation__link hover-animation" href="#kontakt">Kontakt</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+
+    <div class="mobile-navigation">
+      <button class="mobile-navigation__button"  aria-label ="Mobile navigation button.">
+        <svg class="mobile-navigation__icon mobile-navigation__icon--open">
+          <use xlink:href="img/sprite.svg#icon-menu"></use>
+      </svg>
+      <svg class="mobile-navigation__icon mobile-navigation__icon--close">
+        <use xlink:href="img/sprite.svg#icon-cross"></use>
+    </svg>
+      </button>
+    </div>
+  </header>
+  
+<!---------------------------------- HOME----------------------------------------->
+
+<section id="home" class="home">
+
+ 
+
+  <picture class="home__background ">
+    <source media="(max-width:810px)" srcset="./img/slider/bcg-0s.jpg, ./img/slider/bcg-0s.webp" />             
+    <img src="img/slider/bcg-0.jpg" srcset="./img/slider/bcg-0.webp" alt="Zdjęcie kucharzy w kuchni." class="home__img" />
+  </picture>
+  <picture class="home__background home__background--active">
+    <source media="(max-width:810px)" srcset="./img/slider/bcg-1s.jpg, ./img/slider/bcg-1s.webp" />
+    <img src="img/slider/bcg-1.jpg"  srcset="./img/slider/bcg-1.webp" alt="Zdjęcie sali przygotowanej na  osiemnaste urodziny." class="home__img" />
+  </picture>
+  <picture class="home__background">
+    <source media="(max-width:810px)" srcset="./img/slider/bcg-2s.jpg, ./img/slider/bcg-2s.webp" />
+    <img src="img/slider/bcg-2.jpg" srcset="./img/slider/bcg-2.webp" alt="Zdjęcie pary młodej podczas wesela." class="home__img" />
+  </picture>
+  <picture class="home__background ">
+    <source media="(max-width:810px)" srcset="./img/slider/bcg-3s.jpg, ./img/slider/bcg-3s.webp" />
+    <img src="img/slider/bcg-3.jpg" srcset="./img/slider/bcg-3.webp" alt="Zdjęcie zimych ogni." class="home__img" />
+  </picture>
+
+  <div class="home__whitespace">
+
+  <h6 class="home__header">
+    Z nami każde przyjęcie stanie się niezapomnianą chwilą !
+  </h6>
+
+  <p class="home__paragraph">
+    Od ponad 15 lat świadczymy usługi w branży gastronomicznej na terenie województwa małopolskiego i śląskiego.
+     Dzięki bogatemu doświadczeniu zgromadzonemu  na przestrzeni lat świadczymy usługi na najwyższym poziomie, które zadowolą nawet najbardziej wymagających Klientów.
+     Z naszą pomocą zorganizujesz zarówno małe, kameralne przyjęcia domowe jak i duże uroczystości.
+  </p>
+
+  <p class="home__price"></p>
+
+  </div>
+  <button id="next" class="carousel__button carousel__button--next " aria-label ="Next slide">
+    <svg class="carousel__icon">
+      <use xlink:href="img/sprite.svg#icon-circle-right"></use>
+  </svg>
+  </button>
+
+  <button id="previous" class="carousel__button carousel__button--previous" aria-label ="Previous slide">
+    <svg class="carousel__icon">
+        <use xlink:href="img/sprite.svg#icon-circle-left"></use>
+    </svg>
+  </button>
+
+  <div class="carousel__dots">
+    <button class="carousel__dot carousel__dot--fill" data-slide="0" aria-label ="First slide">&nbsp;</button>
+    <button class="carousel__dot" data-slide="1" aria-label ="Second slide">&nbsp;</button>
+    <button class="carousel__dot" data-slide="2" aria-label ="Third slide">&nbsp;</button>
+    <button class="carousel__dot" data-slide="3" aria-label ="Fourth  slide">&nbsp;</button>
+
+  </div>
+
+</section>
+
+<!---------------------------------- FEATURES ----------------------------------------->
+
+<section id="o-nas" class="features">
+  <div class="features__entry">
+    <h4 class="features__header">Kilka słów o nas</h4> 
+    <hr class="features__hr">
+  </div>
+  
+
+  <div class="feature">
+   
+
+    <picture class="feature__figure ">
+      <source media="(max-width:810px)" srcset="./img/about/about-1s.jpg, ./img/about/about-1s.webp" />
+      <img
+        src="img/about/about-1.jpg"
+        srcset="./img/about/about-1.webp"
+        alt="Zdjęcie stołu na sali."
+        class="feature__img"
+      />
+    </picture>
+
+    <div class="feature__content feature__content--revers ">
+      <h2 class="feature__title">Kompleksowa obsługa</h2>
+      <p class="feature__text">
+        Zapewniamy kompleksową obsługę i organizację wszelkiego rodzaju uroczystości i wydarzeń.
+        Z nami możesz zapomnieć o wszystkim i po prostu cieszyć się chwilą. 
+      </p>
+    </div>
+  </div>
+
+  <div class="feature">
+    
+
+    <picture class="feature__figure e">
+      <source media="(max-width:810px)" srcset="./img/about/about-2s.jpg, ./img/about/about-2s.webp" />
+      <img src="img/about/about-2.jpg" srcset="./img/about/about-2.webp" alt="Zdjęcie posiłku." class="feature__img" />
+    </picture>
+
+    <div class="feature__content ">
+      <h2 class="feature__title">Szerokie wybór dań</h2>
+      <p class="feature__text">
+        W naszej menu znajdziesz ponad 100 sprawdzonych dań, a także bogata ofertę przekąsek,
+        deserów, ciast, napoi oraz tortów. Zawsze jesteśmy otwarci na nowe propozycje od naszych klientów.
+      </p>
+    </div>
+    
+  </div>
+
+
+  <div class="feature">
+    
+    <picture class="feature__figure  ">
+      <source media="(max-width:810px)" srcset="./img/about/about-3s.jpg, ./img/about/about-3s.webp" />
+      <img src="img/about/about-3.jpg" srcset="./img/about/about-3.webp" alt="Zdjęcie mięsa podczas smażenia" class="feature__img" />
+    </picture>
+
+    <div class="feature__content  feature__content--revers">
+      <h2 class="feature__title">Najlepsze składniki </h2>
+      <p class="feature__text">
+        Nasze składniki pozyskujemy jedynie od sprawdzonych lokalnych dostawców, tak 
+        abyś zawsze miał pewność, że nasze posiłki wykonane są ze świeżych warzyw i najwyższej jakości mięsa.
+      </p>
+    </div>
+
+  </div>
+
+  <div class="feature">
+    
+    <picture class="feature__figure ">
+      <source media="(max-width:810px)" srcset="./img/about/about-4s.jpg, ./img/about/about-4s.webp" />
+      <img src="img/about/about-4.jpg" srcset="./img/about/about-4.webp" alt="Zdjęcie kucharzy doprawiających potrawy." class="feature__img" />
+    </picture>
+
+    <div class="feature__content ">
+      <h2 class="feature__title">Doświadczony personel</h2>
+      <p class="feature__text">
+        Nasi kucharze z 20 letnim doświadczeniem w zawodzie przygotują wspaniałe dania i przekąski na każdą okazję.
+        Kelnerzy zapewnią profesjonalną obsługę, a dekoracje  stworzą niezapomnianą atmosferę.
+      </p>
+    </div>
+    
+  </div>
+
+</section>
+
+<!---------------------------------- OFFER ----------------------------------------->
+
+<section id="oferta" class="offer">
+
+  <div class="offer__entry">
+    <h4 class="offer__header">Nasza oferta</h4> 
+    <hr class="offer__hr">
+  </div>
+
+  
+
+ <div class="card">
+
+  <div class="offer-item  card__side card__side--front">
+
+    <h4 class="offer-item__title">Imprezy okolicznościowe</h4>
+    <button class="offer-item__button-visible ">Więcej</button>
+
+    <picture class="offer-item__figure">
+      <source media="(max-width:810px)" srcset="./img/offer/offer-1s.jpg, ./img/offer/offer-1s.webp" />
+    <img
+        src="img/offer/offer-1.jpg"
+        srcset="./img/offer/offer-1.webp"
+        alt="Zdjęcie stału z dekoracjami ślubmnymi."
+        class="offer-item__img"
+      />
+    </picture>
+  </div>
+
+  <div class="offer-item card__side card__side--back">
+    
+    <div class="offer-item__content">
+      <h6 class="offer-item__header">Imprezy okolicznościowe</h6>
+      <p class="offer-item__text">Z nami zorganizujesz takie imprezy okolicznościowe jak:</p>
+      <ul class="offer-item__list"> 
+        <li>Wesela</li>
+        <li>Chrzciny</li>
+        <li>Urodziny</li>
+        <li>Rocznice</li>
+        <li>Stypy</li>
+        <li>Komunie</li>
+        <li>Przyjęcia rodzinne</li>
+        <li>Studniówki</li>
+      </ul>
+    </div>
+  </div>
+</div>
+</div>
+
+
+<div class="card">
+
+  <div class="offer-item  card__side card__side--front">
+
+    <h4 class="offer-item__title">Imprezy plenerowe</h4>
+    <button class="offer-item__button-visible ">Więcej</button>
+
+    <picture class="offer-item__figure">
+      <source media="(max-width:810px)" srcset="./img/offer/offer-2s.jpg, ./img/offer/offer-2s.webp" />
+    <img
+        src="img/offer/offer-2.jpg"
+        srcset="./img/offer/offer-2.webp"
+        alt="Stół na plarzy przygotowany do obiadu."
+        class="offer-item__img"
+      />
+    </picture>
+  </div>
+
+  <div class="offer-item card__side card__side--back">
+    
+    <div  class="offer-item__content">
+      <h6 class="offer-item__header">Imprezy plenerowe</h6>
+      <p class="offer-item__text">Z nami w dowolnym miejscu zorganizujesz:</p>
+      <ul class="offer-item__list">
+        <li>Grille</li>
+        <li>Pikniki firmowe</li>
+        <li>Pikniki rodzinne</li>
+        <li>Festyny rodzinne</li>
+        <li>Imprezy tematyczne</li>
+        <li>Imprezy okolicznościowe</li>
+        <li>Imprezy firmowe</li> 
+      </ul>
+    </div>
+  </div>
+</div>
+
+<div class="card">
+
+  <div class="offer-item  card__side card__side--front">
+
+    <h4 class="offer-item__title">Imprezy firmowe</h4>
+    <button class="offer-item__button-visible ">Więcej</button>
+
+    <picture class="offer-item__figure">
+    <source media="(max-width:810px)" srcset="./img/offer/offer-3s.jpg, ./img/offer/offer-3s.webp" />
+    <img
+        src="img/offer/offer-3.jpg"
+        srcset="./img/offer/offer-3.webp"
+        alt="Zdjęcia obiadu firmowego."
+        class="offer-item__img"
+      />
+    </picture>
+  </div>
+
+  <div class="offer-item card__side card__side--back">
+    
+    <div  class="offer-item__content">
+      <h6 class="offer-item__header">Imprezy firmowe</h6>
+      <p class="offer-item__text">Zorganizujemy w twojej firmie:</p>
+      <ul class="offer-item__list"> 
+        <li>Bankiety firmowe</li>
+        <li>Jubileusze</li>
+        <li>Imprezy integracyjne</li>
+        <li>Seminaria</li>
+        <li>Konferencje</li>
+        <li>Pokazy</li>
+        <li>Gale </li>
+        <li>Wigilie firmowe</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<div class="card">
+
+  <div class="offer-item  card__side card__side--front">
+
+    <h4 class="offer-item__title">Obsługa barmańska</h4>
+    <button class="offer-item__button-visible ">Więcej</button>
+
+    <picture class="offer-item__figure">
+    <source media="(max-width:810px)" srcset="./img/offer/offer-4s.jpg, ./img/offer/offer-4s.webp" />
+    <img
+        src="img/offer/offer-4.jpg"
+        srcset="./img/offer/offer-4.webp"
+        alt="Zdjęcie napoju alkoholowego."
+        class="offer-item__img"
+      />
+    </picture>
+  </div>
+
+  <div class="offer-item card__side card__side--back">
+    
+    <div  class="offer-item__content">
+      <h6 class="offer-item__header">Obsługa barmańska</h6>
+      <p class="offer-item__text">W naszej ofercie znajdują się również usługi profesjonalnego barmana.
+         Wyśmienite koktajle i drinki zachwycą twoich gości. Szeroki wybór napojów:
+
+      </p>
+      <ul class="offer-item__list"> 
+        <li>100 koktajli alkoholowych </li>
+        <li>40 koktajli bezalkoholowych</li>
+        <li>30 rodzajów alkoholi z całego świata</li>
+        
+        
+      </ul>
+    </div>
+  </div>
+</div>
+
+
+  
+
+<div class="card">
+
+  <div class="offer-item  card__side card__side--front">
+
+    <h4 class="offer-item__title">Wynajem lokalu</h4>
+    <button class="offer-item__button-visible ">Więcej</button>
+
+    <picture class="offer-item__figure">
+      <source media="(max-width:810px)" srcset="./img/offer/offer-5s.jpg, ./img/offer/offer-5s.webp" />
+    <img
+        src="img/offer/offer-5.jpg"
+        srcset="./img/offer/offer-5.webp"
+        alt="Zdjęcie sali biesiadnej."
+        class="offer-item__img"
+      />
+    </picture>
+  </div>
+
+  <div class="offer-item card__side card__side--back">
+    
+    <div  class="offer-item__content">
+      <h6 class="offer-item__header">Wynajem lokalu</h6>
+      <p class="offer-item__text">Oferujemy wynajem sali mogącje pomieści do 150 osób o całkowitej powierzchni 412 metrów kwadratowych.Cena wynajmu:
+      </p>
+      <ul class="offer-item__list"> 
+        <li>Poniedziałek - Czwartek - 500 PLN</li>
+        <li>Piątek - Niedziela  -  800PLN</li>
+        
+      </ul>
+    </div>
+  </div>
+</div>
+
+<div class="card">
+
+  <div class="offer-item  card__side card__side--front">
+
+    <h4 class="offer-item__title">Usługi cukiernicze</h4>
+    <button class="offer-item__button-visible ">Więcej</button>
+
+    <picture class="offer-item__figure">
+      <source media="(max-width:810px)" srcset="./img/offer/offer-6s.jpg, ./img/offer/offer-6s.webp" />
+    <img
+        src="img/offer/offer-6.jpg"
+        srcset="./img/offer/offer-6.webp"
+        alt="Zdjęcie ciasta."
+        class="offer-item__img"
+      />
+    </picture>
+  </div>
+
+  <div class="offer-item card__side card__side--back">
+    
+    <div  class="offer-item__content">
+      <h6 class="offer-item__header">Usługi cukiernicze</h6>
+      <p class="offer-item__text">Oferujemy szeroki wybór wspaniałych wypieków, które wyróżniają się wyśmienitym smakiem oraz fantazyjnym wyglądem.
+         W naszej stałej ofercie znajdują się:</p>
+      <ul class="offer-item__list"> 
+        <li>Torty</li>
+        <li>Ciasta</li>
+        <li>Ciastka</li>
+        <li>Desery</li>
+      </ul>
+    </div>
+  </div>
+  </div>
+  
+</section>
+
+<!---------------------------------- TESTIMONIALS ----------------------------------------->
+
+<section id="opinie" class="testimonials">
+
+  <div class="testimonials__entry">
+    <h4 class="testimonials__header">Opinie klientów</h4> 
+    <hr class="testimonials__hr">
+  </div>
+
+  <div class='bg-video'>
+    <video class='bg-video__content' autoplay muted loop>
+      <source src="movies/movie-1.m4v" type="video/mp4">
+      Your browser is not supported !
+    </video>
+  </div>  
+
+  
+
+
+
+  <div class="testimonial">
+
+    <div class="testimonial__quote-bcg">
+      <blockquote class="testimonial__blockquote">	&quot Najlepszy catering jaki jadłem! Wspaniale zbilansowane i zróżnicowane posiłki, przesmaczne i kolorowe. 
+      Obsługa klienta i rozwiązywanie problemów na najwyższym poziomie. 5/5 Gorąco polecam! 	&quot
+      </blockquote>
+      <p class="testimonial__name"> Piotr M. Bielsko-Biała</p>
+    </div>
+  </div>
+
+
+  <div class="testimonial">
+
+    <div class="testimonial__quote-bcg">
+      <blockquote class="testimonial__blockquote"> 	&quot Z czystym sumieniem polecam usługi każdemu, komu zależy na pysznych i świeżych potrawach.
+      Korzystaliśmy z usług firmy, organizując komunię św. syna. 
+      Duży plus należy się również za bardzo dobry kontakt i obsługę.	&quot 
+      </blockquote>
+      <p class="testimonial__name"> Katarzyna U. Żywiec</p>
+    </div>
+  </div>
+
+  <div class="testimonial">
+
+    <div class="testimonial__quote-bcg">
+      <blockquote class="testimonial__blockquote">	&quot Profesjonalna organizacja wesela, wszystko było dopięte na ostatni guzik. Sala piękna.
+      Jedzenie bardzo smaczne i gorące. Profesjonalna obsługa. Goście byli pod wielkim wrażeniem. Szczerze polecam babeczki z czekoladą - obłędne! 	&quot
+      </blockquote>
+      <p class="testimonial__name"> Halina P. Oświęcim</p>
+    </div>
+  </div>
+
+  <div class="testimonial">
+
+    <div class="testimonial-more__bcg">
+
+      <h6 class="testimonial-more__header"> Dowiedź się więcej ! </h6>
+      <p class="testimonial-more__text">Odwiedź nasze profile w mediach społecznościowych i przeczytaj więcej opinii naszych klientów.  </p>
+      <div class="testimonial-more__links">
+        <p class="testimonial-more__link  ">
+          <a class="link" target="_blank"  rel="noopener" href="https://www.facebook.com/">
+          <svg class="testimonial-more__icon">
+            <use xlink:href="img/sprite.svg#icon-facebook2"></use>
+          </svg> Facebook</a>
+        </p>
+        <p class="testimonial-more__link  ">
+          <a class="link" target="_blank" rel="noopener" href="https://www.instagram.com/">
+          <svg class="testimonial-more__icon">
+            <use xlink:href="img/sprite.svg#icon-instagram"></use>
+        </svg> Instagram</a>
+        </p>
+    </div>
+    </div>
+
+  </div>
+</section>
+
+<!---------------------------------- CONTACT ----------------------------------------->
+
+<section id="kontakt" class="contact">
+
+
+  <div class="contact__entry">
+    <h4 class="contact__header">Kontakt</h4> 
+    <hr class="contact__hr">
+  </div>
+
+  <div class="content-container">
+
+    
+
+  <div class="content-container__contact">
+      <h6 class="content-container__header">Skontakyuj się z nami</h6>
+      <div>
+        <p class="content-container__link">
+          <a  href="tel: 48 111 222 XXX ">
+          <svg class="content-container__icon">
+          <use xlink:href="img/sprite.svg#icon-phone"></use>
+          </svg>
+          + 48 111 222 XXX </a>
+        </p>
+        <p class="content-container__link">
+          <a  href="mailto:biuro@superbcatering.pl">
+            <svg class="content-container__icon">
+            <use xlink:href="img/sprite.svg#icon-mail"></use>
+            </svg>
+            biuro@superbcatering.pl</a>
+          </p>
+        <p class="content-container__link"> 
+          <a  target="_blank" rel="noopener" href="https://www.facebook.com/">
+          <svg class="content-container__icon">
+            <use xlink:href="img/sprite.svg#icon-facebook2"></use>
+          </svg>
+          Facebook</a>
+        </p>
+      </div>
+   </div>
+
+
+    
+  
+      <div class="content-container__hours ">
+        <h6 class="content-container__header" >Odwiedź nas w naszym lokalu</h6>
+        
+        <p>Godziny otwarcia:</p>
+        <p >Poniedziałek - Piatek 10:00-22:00</p>
+        <p >Sobota 10:00-23:00</p>
+        <p >Niedziela 12:00-22:00</p>
+      
+      </div>
+
+  </div>
+
+
+
+  <div class="map-container">
+
+    <h6 class="map-container__header">Tu znajdziesz nasz lokal !</h6>
+    <div id="map" class="map-container__content"></div>
+
+  </div>
+
+</section>
+
+
+
+
+<!---------------------------------- FOOTER ----------------------------------------->
+
+<footer class="footer">
+
+  
+
+
+  <div class="footer__container">
+    <ul class="footer__list ">ADRES
+    <li  >32-600 Oświęcim</li>
+    <li  >ul. Nigdzie 121</li>
+   </ul> 
+  </div>
+
+  <div class="footer__container">
+    <ul class="footer__list " >NAWIGACJA
+      <li >
+        <a class="footer__link " href="#home">Home</a>
+      </li>
+      <li >
+        <a class="footer__link " href="#o-nas">O nas </a>
+      </li>
+      <li >
+        <a class="footer__link " href="#oferta">Oferta</a>
+      </li>
+      <li >
+        <a class="footer__link " href="#opinie">Opinie </a>
+      </li>
+      <li >
+        <a class="footer__link " href="#kontakt">Kontakt </a>
+      </li>
+    </ul>
+  </div>
+
+
+  <div class="footer__container">
+    <ul class="footer__list ">KONTAKT
+      <li  >
+        <a class="link" href="tel: 48 111 222 XXX ">
+        <svg class="footer__icon">
+          <use xlink:href="img/sprite.svg#icon-phone"></use>
+        </svg>
+        + 48 111 222 XXX </a>
+      </li>
+      <li > 
+        <a class="link" href="mailto:biuro@superbcatering.pl">
+        <svg class="footer__icon">
+          <use xlink:href="img/sprite.svg#icon-mail"></use>
+         </svg>
+        biuro@superbcatering.pl</a>
+      </li>
+      <li >
+        <a class="link" target="_blank" rel="noopener" href="https://www.facebook.com/">
+        <svg class="footer__icon">
+          <use xlink:href="img/sprite.svg#icon-facebook2"></use>
+        </svg>
+        Facebook</a>
+      </li>
+      <li >
+        <a class="link" target="_blank" rel="noopener" href="https://www.instagram.com/">
+        <svg class="footer__icon">
+          <use xlink:href="img/sprite.svg#icon-instagram"></use>
+        </svg>
+        Instagram</a>
+      </li>
+   </ul> 
+  </div>
+
+  <div class="footer__rights">
+    <p>Copyright &copy;  <span class="year">2025</span> by Superb Catering, Inc. All rights reserved.</p>
+  </div>
+
+</footer>
+
+
+
+    <script src="scripts/script.js"></script> 
+  </body>
+</html> 
